@@ -1,0 +1,20 @@
+{
+    "cmd": "SET_ACTIVITY",
+    "args": {
+        "activity": {
+            "details": title.split(" - ")[0].rstrip(),
+            "state": title.split(" - ")[1].lstrip(),
+            "assets": {
+                "large_image": f"https://i.ytimg.com/vi/{id}/mqdefault.jpg",
+                "large_text": "Checkmate Premium Users",
+                "small_image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Mpv_logo_%28official%29.png"
+            },
+            "buttons": [{
+                "label": "Listen Song",
+                "url": f"https://music.youtube.com/watch?v={id}"
+            }]
+        },
+        "pid": pid
+    },
+    "nonce": str(time.time_ns())
+}
